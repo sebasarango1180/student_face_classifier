@@ -129,7 +129,7 @@ print("------------------------------------------------------")
 
 # ===================================================================
 
-
+'''
 while True:
     ret, img = camera.read()
 
@@ -181,9 +181,9 @@ while True:
         break
 
 cv2.destroyWindow("Allowance")
+'''
 
-
-'''#img = cv2.imread("/home/experimentality/Documents/Inteligencia/final_inteligencia/Validation/Serio_alejo3.jpg")
+#img = cv2.imread("/home/experimentality/Documents/Inteligencia/final_inteligencia/Validation/Serio_alejo3.jpg")
 #img = cv2.imread("/home/experimentality/Documents/Inteligencia/final_inteligencia/Validation/enojo2_alejo.jpg")
 v_files = os.listdir(validator)
 
@@ -225,4 +225,3 @@ for fil in v_files:
 
     else:
         print('No faces found')
-'''
