@@ -129,7 +129,7 @@ print("------------------------------------------------------")
 
 # ===================================================================
 
-'''
+
 while True:
     ret, img = camera.read()
 
@@ -151,7 +151,7 @@ while True:
                 imgn_rs = imgn_fv.reshape(1, -1)
                 print("Dimensiones de caracteristicas (reshape):")
                 print(np.shape(imgn_rs))
-                imgn_ft = min_max_scaler.fit_transform(imgn_rs)
+                imgn_ft = min_max_scaler.transform(imgn_rs)
                 print("Dimensiones de entrada normalizada:")
                 print(np.shape(imgn_ft))
                 imgn_pca = pca.transform(imgn_ft)
@@ -181,8 +181,8 @@ while True:
         break
 
 cv2.destroyWindow("Allowance")
-'''
 
+'''
 #img = cv2.imread("/home/experimentality/Documents/Inteligencia/final_inteligencia/Validation/Serio_alejo3.jpg")
 #img = cv2.imread("/home/experimentality/Documents/Inteligencia/final_inteligencia/Validation/enojo2_alejo.jpg")
 v_files = os.listdir(validator)
@@ -209,7 +209,7 @@ for fil in v_files:
                 imgn_rs = imgn_fv.reshape(1, -1)
                 #print("Dimensiones de caracteristicas (reshape):")
                 #print(np.shape(imgn_rs))
-                imgn_ft = min_max_scaler.fit_transform(imgn_rs)
+                imgn_ft = min_max_scaler.transform(imgn_rs)
                 #print("Dimensiones de entrada normalizada:")
                 #print(np.shape(imgn_ft))
                 imgn_pca = pca.transform(imgn_ft)
@@ -225,3 +225,4 @@ for fil in v_files:
 
     else:
         print('No faces found')
+'''
