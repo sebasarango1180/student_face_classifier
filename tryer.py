@@ -88,10 +88,10 @@ testData_pca = pca.transform(testData)
 
 print("[INFO] Entrenando red neuronal...")
 
-parameters = {'alpha': [1e-5, 1e-2, 1, 10, 100], 'hidden_layer_sizes': [(5, 3), (3, 2), (7, 3), (8, 4), (10, 4)],
+parameters = {'alpha': [1e-5, 1e-2, 1, 10, 100], 'hidden_layer_sizes': [(5, 4, 2), (3, 3, 2), (7, 3, 2), (8, 3, 2), (10, 6, 3)],
               'random_state': [1, 10], 'solver': ('sgd', 'lbfgs')}
 
-#[(5, 4, 2), (3, 3, 2), (7, 3, 2), (8, 3, 2), (10, 6, 3)]
+#[(5, 4, 2), (3, 3, 2), (7, 3, 2), (8, 3, 2), (10, 6, 3)] [(5, 3), (3, 2), (7, 3), (8, 4), (10, 4)]
 mlp = MLPClassifier(max_iter=500000)
 mlp = GridSearchCV(mlp, parameters)  # Find the best classifier based on params.
 mlp.fit(trainData_pca, trainLabels)
@@ -104,9 +104,9 @@ print("Score de clasificacion (prueba):")
 print(mlp.score(testData_pca, testLabels))
 print("------------------------------------------------------")
 
-print("Mejor estimador neuronal:")
-print(mlp.best_estimator_)
-print("------------------------------------------------------")
+#print("Mejor estimador neuronal:")
+#print(mlp.best_estimator_)
+#print("------------------------------------------------------")
 
 y_pred = mlp.predict(testData_pca)  # Predicted.
 print "Predicted labels"
