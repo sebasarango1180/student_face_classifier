@@ -88,8 +88,9 @@ testData_pca = pca.transform(testData)
 
 print("[INFO] Entrenando red neuronal...")
 
-parameters = {'alpha': [1e-5, 1e-2, 1, 10, 100], 'hidden_layer_sizes': [(5, 4, 2), (3, 3, 2), (7, 3, 2), (8, 3, 2), (10, 6, 3)],
+parameters = {'alpha': [1e-5, 1e-2, 1, 10, 100], 'hidden_layer_sizes': [(8, 3, 2)],
               'random_state': [1, 10], 'solver': ('sgd', 'lbfgs')}
+#(5, 4, 2), (3, 3, 2), (7, 3, 2), (8, 3, 2),
 
 #[(5, 4, 2), (3, 3, 2), (7, 3, 2), (8, 3, 2), (10, 6, 3)] [(5, 3), (3, 2), (7, 3), (8, 4), (10, 4)]
 mlp = MLPClassifier(max_iter=500000)
