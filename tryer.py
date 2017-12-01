@@ -104,9 +104,9 @@ print("Score de clasificacion (prueba):")
 print(mlp.score(testData_pca, testLabels))
 print("------------------------------------------------------")
 
-#print("Mejor estimador neuronal:")
-#print(mlp.best_estimator_)
-#print("------------------------------------------------------")
+print("Mejor estimador neuronal:")
+print(mlp.best_estimator_)
+print("------------------------------------------------------")
 
 y_pred = mlp.predict(testData_pca)  # Predicted.
 print "Predicted labels"
