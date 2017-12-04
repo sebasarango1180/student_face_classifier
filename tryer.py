@@ -81,7 +81,7 @@ print("[INFO] Validacion cruzada (80-20)...")
 
 print("[INFO] Aplicando PCA...")
 
-pca = PCA(n_components=400)
+pca = PCA(n_components=0.85)
 pca.fit(trainData)
 trainData_pca = pca.transform(trainData)
 testData_pca = pca.transform(testData)
