@@ -1,1 +1,3 @@
-# student_face_classifier
+# Students Face Classifier
+
+*Version:* v0.2.0
